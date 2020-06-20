@@ -5,7 +5,8 @@
     <classes>
       <class name="CategoriesTest">
         <methods>
-          <include name="getResponse"/>
+          <include name="getAPIwithIncorrectURL"/>
+          <include name="getAPIwithoutHeaders"/>
           <include name="setup"/>
         </methods>
       </class> <!-- CategoriesTest -->

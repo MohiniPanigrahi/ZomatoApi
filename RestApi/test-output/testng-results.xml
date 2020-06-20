@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="2" ignored="0" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1983" started-at="2020-06-20T11:35:06Z" finished-at="2020-06-20T11:35:08Z">
+  <suite name="Default suite" duration-ms="2070" started-at="2020-06-20T13:53:53Z" finished-at="2020-06-20T13:53:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1983" started-at="2020-06-20T11:35:06Z" finished-at="2020-06-20T11:35:08Z">
+    <test name="Default test" duration-ms="2070" started-at="2020-06-20T13:53:53Z" finished-at="2020-06-20T13:53:55Z">
       <class name="CategoriesTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="11" started-at="2020-06-20T11:35:06Z" finished-at="2020-06-20T11:35:06Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="6" started-at="2020-06-20T13:53:53Z" finished-at="2020-06-20T13:53:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getAPI()[pri:0, instance:CategoriesTest@68be2bc2]" name="getAPI" duration-ms="1867" started-at="2020-06-20T11:35:06Z" finished-at="2020-06-20T11:35:07Z">
+        <test-method status="PASS" signature="getAPI()[pri:0, instance:CategoriesTest@68be2bc2]" name="getAPI" duration-ms="1116" started-at="2020-06-20T13:53:53Z" finished-at="2020-06-20T13:53:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAPI -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="1" started-at="2020-06-20T11:35:07Z" finished-at="2020-06-20T11:35:07Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="1" started-at="2020-06-20T13:53:54Z" finished-at="2020-06-20T13:53:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getHeaders()[pri:0, instance:CategoriesTest@68be2bc2]" name="getHeaders" duration-ms="2" started-at="2020-06-20T11:35:07Z" finished-at="2020-06-20T11:35:07Z">
+        <test-method status="PASS" signature="getAPIwithIncorrectHeaders()[pri:0, instance:CategoriesTest@68be2bc2]" name="getAPIwithIncorrectHeaders" duration-ms="276" started-at="2020-06-20T13:53:54Z" finished-at="2020-06-20T13:53:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getHeaders -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="1" started-at="2020-06-20T11:35:07Z" finished-at="2020-06-20T11:35:07Z">
+        </test-method> <!-- getAPIwithIncorrectHeaders -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="1" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="getResponse()[pri:0, instance:CategoriesTest@68be2bc2]" name="getResponse" duration-ms="34" started-at="2020-06-20T11:35:07Z" finished-at="2020-06-20T11:35:08Z">
-          <exception class="org.json.JSONException">
+        <test-method status="FAIL" signature="getAPIwithIncorrectURL()[pri:0, instance:CategoriesTest@68be2bc2]" name="getAPIwithIncorrectURL" duration-ms="370" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[JSONObject["categories"] is not a string.]]>
+              <![CDATA[expected [404] but found [200]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.json.JSONException: JSONObject["categories"] is not a string.
-at org.json.JSONObject.wrongValueFormatException(JSONObject.java:2590)
-at org.json.JSONObject.getString(JSONObject.java:863)
-at CategoriesTest.getResponse(CategoriesTest.java:57)
+              <![CDATA[java.lang.AssertionError: expected [404] but found [200]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:652)
+at org.testng.Assert.assertEquals(Assert.java:662)
+at CategoriesTest.getAPIwithIncorrectURL(CategoriesTest.java:49)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -64,7 +68,72 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.json.JSONException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPIwithIncorrectURL -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="0" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="getAPIwithoutHeaders()[pri:0, instance:CategoriesTest@68be2bc2]" name="getAPIwithoutHeaders" duration-ms="206" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [403] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [403] but found [200]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:652)
+at org.testng.Assert.assertEquals(Assert.java:662)
+at CategoriesTest.getAPIwithoutHeaders(CategoriesTest.java:68)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPIwithoutHeaders -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="2" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getHeaders()[pri:0, instance:CategoriesTest@68be2bc2]" name="getHeaders" duration-ms="4" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getHeaders -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CategoriesTest@68be2bc2]" name="setup" is-config="true" duration-ms="2" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getResponse()[pri:0, instance:CategoriesTest@68be2bc2]" name="getResponse" duration-ms="25" started-at="2020-06-20T13:53:55Z" finished-at="2020-06-20T13:53:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResponse -->
