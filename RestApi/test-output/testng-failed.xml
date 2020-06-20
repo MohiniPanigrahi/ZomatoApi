@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CategoriesTest">
+      <class name="CollectionsTest">
         <methods>
-          <include name="getAPIwithIncorrectURL"/>
-          <include name="getAPIwithoutHeaders"/>
           <include name="setup"/>
+          <include name="getAPI"/>
         </methods>
-      </class> <!-- CategoriesTest -->
+      </class> <!-- CollectionsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -58,7 +58,7 @@ public class CategoriesTest extends TestBase {
 		int Statuscode =response.getStatusLine().getStatusCode();
 		Assert.assertEquals(Statuscode, 403);
 		JSONObject jObj = ResponseUtils.getJSONObject(response);
-		String Msg = jObj.getJSONArray("message").toString();
+		String Msg = jObj.get("message").toString();
 		Assert.assertEquals(Msg, "Invalid API Key");
 	}
 	
@@ -70,7 +70,7 @@ public class CategoriesTest extends TestBase {
 		int Statuscode =response.getStatusLine().getStatusCode();
 		Assert.assertEquals(Statuscode, 403);
 		JSONObject jObj = ResponseUtils.getJSONObject(response);
-		String Msg = jObj.getJSONArray("message").toString();
+		String Msg = jObj.get("message").toString();
 		Assert.assertEquals(Msg, "Invalid API Key");
 	}
 	
