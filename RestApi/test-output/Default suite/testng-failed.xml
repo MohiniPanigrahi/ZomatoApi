@@ -5,8 +5,8 @@
     <classes>
       <class name="CollectionsTest">
         <methods>
+          <include name="getAPIwithDifferentParam"/>
           <include name="setup"/>
-          <include name="getAPI"/>
         </methods>
       </class> <!-- CollectionsTest -->
     </classes>

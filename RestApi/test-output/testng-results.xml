@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="161" started-at="2020-06-22T16:00:55Z" finished-at="2020-06-22T16:00:55Z">
+  <suite name="Default suite" duration-ms="3890" started-at="2020-06-22T20:31:14Z" finished-at="2020-06-22T20:31:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="161" started-at="2020-06-22T16:00:55Z" finished-at="2020-06-22T16:00:55Z">
+    <test name="Default test" duration-ms="3890" started-at="2020-06-22T20:31:14Z" finished-at="2020-06-22T20:31:18Z">
       <class name="CollectionsTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:CollectionsTest@457e2f02]" name="setup" is-config="true" duration-ms="37" started-at="2020-06-22T16:00:55Z" finished-at="2020-06-22T16:00:55Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:CollectionsTest@457e2f02]" name="setup" is-config="true" duration-ms="15" started-at="2020-06-22T20:31:14Z" finished-at="2020-06-22T20:31:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="getAPI()[pri:0, instance:CollectionsTest@457e2f02]" name="getAPI" duration-ms="18" started-at="2020-06-22T16:00:55Z" finished-at="2020-06-22T16:00:55Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="getAPIdatafromOtherAPI()[pri:0, instance:CollectionsTest@457e2f02]" name="getAPIdatafromOtherAPI" duration-ms="2286" started-at="2020-06-22T20:31:14Z" finished-at="2020-06-22T20:31:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPIdatafromOtherAPI -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CollectionsTest@457e2f02]" name="setup" is-config="true" duration-ms="4" started-at="2020-06-22T20:31:17Z" finished-at="2020-06-22T20:31:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="getAPIwithDifferentParam()[pri:0, instance:CollectionsTest@457e2f02]" name="getAPIwithDifferentParam" duration-ms="507" started-at="2020-06-22T20:31:17Z" finished-at="2020-06-22T20:31:17Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[total count failed expected [3] but found [0]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.qa.utils.RequestUtils.setqueryparams(RequestUtils.java:15)
-at CollectionsTest.getAPI(CollectionsTest.java:49)
+              <![CDATA[java.lang.AssertionError: total count failed expected [3] but found [0]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at CollectionsTest.getAPIwithDifferentParam(CollectionsTest.java:68)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -44,10 +58,26 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAPI -->
+        </test-method> <!-- getAPIwithDifferentParam -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CollectionsTest@457e2f02]" name="setup" is-config="true" duration-ms="3" started-at="2020-06-22T20:31:17Z" finished-at="2020-06-22T20:31:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getAPIwithIIncorrectParamValues()[pri:0, instance:CollectionsTest@457e2f02]" name="getAPIwithIIncorrectParamValues" duration-ms="450" started-at="2020-06-22T20:31:17Z" finished-at="2020-06-22T20:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPIwithIIncorrectParamValues -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:CollectionsTest@457e2f02]" name="setup" is-config="true" duration-ms="3" started-at="2020-06-22T20:31:18Z" finished-at="2020-06-22T20:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getAPIwithsameParam()[pri:0, instance:CollectionsTest@457e2f02]" name="getAPIwithsameParam" duration-ms="554" started-at="2020-06-22T20:31:18Z" finished-at="2020-06-22T20:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPIwithsameParam -->
       </class> <!-- CollectionsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

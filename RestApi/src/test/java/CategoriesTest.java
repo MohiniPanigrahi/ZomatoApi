@@ -25,7 +25,6 @@ public class CategoriesTest extends TestBase {
 	public void setup()  throws ClientProtocolException, IOException{
 		baseclass = new TestBase();
 		url = prop.getProperty("baseUrl")+prop.getProperty("categoriesServiceurl");
-		//url = "https://developers.zomato.com/api/v2.1/categories";
 	}
 	
 	@Test  // Verify get call, service url and status code
@@ -57,6 +56,7 @@ public class CategoriesTest extends TestBase {
 		//Check for status code
 		int Statuscode =response.getStatusLine().getStatusCode();
 		Assert.assertEquals(Statuscode, 403);
+		
 		JSONObject jObj = ResponseUtils.getJSONObject(response);
 		String Msg = jObj.get("message").toString();
 		Assert.assertEquals(Msg, "Invalid API Key");
@@ -89,20 +89,17 @@ public class CategoriesTest extends TestBase {
 	public void getResponse() throws ParseException, IOException{
 		JSONObject jObj = ResponseUtils.getJSONObject(response);
 		JSONArray jArray = jObj.getJSONArray("categories");
-//		System.out.println("Array of Objects =" +jArray);
-//		for(int i =0; i<jArray.length(); i++) {
-//			JSONObject subObj = jArray.getJSONObject(i);
-//			String S = subObj.get("categories").toString();
-//			System.out.println("Child entries"+ S);
-//		}
+
 		JSONObject subObj = jArray.getJSONObject(0);
 		JSONObject s1= (JSONObject) subObj.get("categories");
+		
 		String name = s1.getString("name");
 		Assert.assertEquals(name, "Delivery");
+		
 		int id = s1.getInt("id");
 		Assert.assertEquals(id, 1);
 		
-		//Get number odf rows
+		//Get number of rows
 		int count = jArray.length();
 		Assert.assertEquals(13, count);
 	}

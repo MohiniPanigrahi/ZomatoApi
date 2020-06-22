@@ -1,0 +1,5 @@
+{
+	"queryset1" : [{"param": "city_id","value": "1"},{"param" : "city_id","value":"4"}],
+	"queryset2" : [{"param": "city_id","value": "2"},{"param" : "count","value":"3"}],
+	"queryset3" : [{"param": "lat","value": "123"},{"param" : "lon","value":"4"}]
+}

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 22 21:30:55 IST 2020</td>
+<td>Started on:</td><td>Tue Jun 23 02:01:14 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (161 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3890 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,10 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='CollectionsTest.getAPI()'><b>getAPI</b><br>Test class: CollectionsTest</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.qa.utils.RequestUtils.setqueryparams(RequestUtils.java:15)
-	at CollectionsTest.getAPI(CollectionsTest.java:49)
+<td title='CollectionsTest.getAPIwithDifferentParam()'><b>getAPIwithDifferentParam</b><br>Test class: CollectionsTest</td>
+<td><div><pre>java.lang.AssertionError: total count failed expected [3] but found [0]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at CollectionsTest.getAPIwithDifferentParam(CollectionsTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,10 +107,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace503195940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace503195940'><pre>java.lang.NullPointerException
-	at com.qa.utils.RequestUtils.setqueryparams(RequestUtils.java:15)
-	at CollectionsTest.getAPI(CollectionsTest.java:49)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1237825806", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1237825806'><pre>java.lang.AssertionError: total count failed expected [3] but found [0]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at CollectionsTest.getAPIwithDifferentParam(CollectionsTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,6 +140,29 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<td>0</td>
+<td>CollectionsTest@457e2f02</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='CollectionsTest.getAPIdatafromOtherAPI()'><b>getAPIdatafromOtherAPI</b><br>Test class: CollectionsTest</td>
+<td></td>
+<td>2</td>
+<td>CollectionsTest@457e2f02</td></tr>
+<tr>
+<td title='CollectionsTest.getAPIwithIIncorrectParamValues()'><b>getAPIwithIIncorrectParamValues</b><br>Test class: CollectionsTest</td>
+<td></td>
+<td>0</td>
+<td>CollectionsTest@457e2f02</td></tr>
+<tr>
+<td title='CollectionsTest.getAPIwithsameParam()'><b>getAPIwithsameParam</b><br>Test class: CollectionsTest</td>
+<td></td>
 <td>0</td>
 <td>CollectionsTest@457e2f02</td></tr>
 </table><p>

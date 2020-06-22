@@ -9,13 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">161</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">3,890</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CollectionsTest</td><td><a href="#m0">getAPI</a></td><td rowspan="1">1592841655255</td><td rowspan="1">18</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">CollectionsTest</td><td><a href="#m0">getAPIwithDifferentParam</a></td><td rowspan="1">1592857877088</td><td rowspan="1">507</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">CollectionsTest</td><td><a href="#m1">getAPIdatafromOtherAPI</a></td><td rowspan="1">1592857874790</td><td rowspan="1">2286</td></tr><tr class="passedeven"><td><a href="#m2">getAPIwithIIncorrectParamValues</a></td><td rowspan="1">1592857877608</td><td rowspan="1">450</td></tr><tr class="passedeven"><td><a href="#m3">getAPIwithsameParam</a></td><td rowspan="1">1592857878065</td><td rowspan="1">554</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">CollectionsTest#getAPI</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.qa.utils.RequestUtils.setqueryparams(RequestUtils.java:15)
-	at CollectionsTest.getAPI(CollectionsTest.java:49)
+<h2>Default test</h2><h3 id="m0">CollectionsTest#getAPIwithDifferentParam</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: total count failed expected [3] but found [0]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at CollectionsTest.getAPIwithDifferentParam(CollectionsTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -42,5 +45,8 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">CollectionsTest#getAPIdatafromOtherAPI</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">CollectionsTest#getAPIwithIIncorrectParamValues</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">CollectionsTest#getAPIwithsameParam</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

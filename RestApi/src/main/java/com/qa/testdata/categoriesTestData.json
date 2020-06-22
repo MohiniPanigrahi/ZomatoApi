@@ -1,4 +1,0 @@
-{
-	"queryset1" : [{"queryparam": "city_id","value": "1"},{"queryparams" : "city_id","value":"4"}],
-	"queryset2" : [{"queryparam": "lat","value": "12"},{"queryparams" : "lon","value":"4"}]
-}

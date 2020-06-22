@@ -34,16 +34,6 @@ public class RestClient {
 	public CloseableHttpResponse getResponsewithParams(HashMap<String, String> header,String url) throws ClientProtocolException, IOException, URISyntaxException {
 		CloseableHttpClient client = HttpClients.createDefault();
 		HttpGet get = new HttpGet(url);
-//		HashMap<String,String> params = new HashMap<String,String>();
-//		params.put("city_id","1");
-		
-		//URIBuilder builder = new URIBuilder(url);
-	//	builder.setQuery("city_id=1");
-	//	for (String name : params.keySet()) {
-	  //      builder.addParameter("city_id","1");
-	//    }
-	   // url = builder.build().toString();
-		
 		 
 	    for(Map.Entry<String,String> entry:header.entrySet()) {
 			get.addHeader(entry.getKey(),entry.getValue());
