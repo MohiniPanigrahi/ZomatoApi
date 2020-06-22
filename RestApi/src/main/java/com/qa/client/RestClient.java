@@ -44,7 +44,7 @@ public class RestClient {
 	//    }
 	   // url = builder.build().toString();
 		
-		
+		 
 	    for(Map.Entry<String,String> entry:header.entrySet()) {
 			get.addHeader(entry.getKey(),entry.getValue());
 		}
